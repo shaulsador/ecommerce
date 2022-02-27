@@ -50,9 +50,10 @@ const Checkout = ({ cart, onCaptureCheckout, order, errorMsg }) => {
 
 	useEffect(() => {
 		generateToken();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [cart]);
 	const Form = () => {
-		return activeStep == 0 ? (
+		return activeStep === 0 ? (
 			<AddressForm checkoutToken={checkoutToken} getData={getShippingData} />
 		) : (
 			<PaymentForm
@@ -123,7 +124,7 @@ const Checkout = ({ cart, onCaptureCheckout, order, errorMsg }) => {
 							</Step>
 						))}
 					</Stepper>
-					{activeStep == steps.length ? (
+					{activeStep === steps.length ? (
 						<Confirmation />
 					) : (
 						checkoutToken && <Form />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import { commerce } from './lib/commerce';
 import { Products, Navbar, Cart, Checkout } from './components';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
@@ -62,6 +62,7 @@ function App() {
 	useEffect(() => {
 		fetchProducts();
 		fetchCart();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	// console.log(cart);

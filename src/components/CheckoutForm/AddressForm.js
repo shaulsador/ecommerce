@@ -59,6 +59,7 @@ const AddressForm = ({ checkoutToken, getData }) => {
 	};
 	useEffect(() => {
 		fetchCountries(checkoutToken.id);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	useEffect(() => {
 		if (country) {
@@ -69,6 +70,7 @@ const AddressForm = ({ checkoutToken, getData }) => {
 		if (subdivision) {
 			fetchOptions(checkoutToken.id, country, subdivision);
 		}
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [subdivision]);
 	return (
 		<>

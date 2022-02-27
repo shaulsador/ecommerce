@@ -37,7 +37,7 @@ const Navbar = ({ totalItems }) => {
 						Chez Xiaotian
 					</Typography>
 					<div className={classes.grow}></div>
-					{location.pathname == '/' && (
+					{location.pathname === '/' && (
 						<div className={classes.button}>
 							<IconButton
 								component={Link}
